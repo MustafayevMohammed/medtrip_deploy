@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    {% comment %} <link rel="stylesheet" type="text/css" href="css/main.css" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    {% comment %} <link rel="stylesheet" href="css/responsive.css" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <title>MedTrip</title>
+  </head>
+  <body>
+    <header class="no-height">
+      <div class="header-container">
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <a href="/"><img src="{% static 'img/medtrip-logo.png' %}" alt="" /></a>
+            </div>
+
+            <div class="navbar-content nav-menu-content">
+              <ul>
+                <li><a href="{% url 'enterprises:sanatory' %}">Sanatoriyum və Kurortlar</a></li>
+                <li><a href="#cosmetology">Reabilitasiya və Bərpa</a></li>
+                <li><a href="#cosmetology">Kosmetologiya və üz qulluğu</a></li>
+
+                <li>
+                  Digər <i class="fas fa-chevron-down"></i>
+                  <ul class="submenu">
+                    <li><a href="#wellnes">Sağlamlıq</a></li>
+                    <li><a href="{% url 'enterprises:tours' %">Turlar və Servis</a></li>
+                    <li><a href="{% url 'market:product' %}">Məhsullar</a></li>
+                    <li><a href="#contact">Məsləhət</a></li>
+                    <li><a href="{% url 'account:about_page' %}">Haqqımızda</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-icons">
+              <div class="icons">
+                <a href="">
+                  <img src="{% static 'svg/search.svg' %}" alt="" />
+                </a>
+
+                <a href="{% url 'market:basket' %}">
+                  <img src="{% static 'svg/add-cart.svg' %}" alt="" />
+                </a>
+
+                <a href="{% url 'account:registration_method' %}">
+                  <img src="{% static 'svg/users.svg' %}" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="hamburger-menu">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="about">
+      <div class="container">
+        <h1>BIZ KIMIK?</h1>
+        <p>
+          Biz dünya üzrə bütün növ yalnız və yalnız təbii üsullarla müalicə
+          prosedurlarının həyata keçirildiyi ən yaxşı məkanları özündə
+          birləşdirən , həmin məkanlara gedişinizi asanlaşdıracaq və sizi tam
+          təmin edəcək tur paketləri təqdim edən , dünyanın istənilən yerində ,
+          evinizdə sizi təbii müalicənin xammalı ilə təmin edən platformayıq.
+        </p>
+        <img src="{% static 'img/team-work.gif' %}" class="rounded mx-auto d-block" alt="" />
+        <p>
+          Hədəfimiz! <br />
+          Dünyanın dörd bir yanında yerləşən , bilinən və bilinməyən təbii
+          müalicə məkanlarını , onların xidmətlərini öz platformamızda
+          yerləşdirərək istənilən insan üçün həmin məkanlara çıxışı əlçatan
+          edəcəyik. <br />
+          <br />
+          Missiyamız ! <br />
+          İnsanların öz sağlamlıqlarına qovuşması və ya önləm almaları üçün ,
+          cavanlaşmaq üçün , sağlamlığını möhkəmləndirmək üçün təbii yollarla
+          müdaxilələr arzuladıqları zaman onlara ən yaxşı təkliflər edə bilmək
+          bizim birinci missiyamızdır. Bundan əlavə öz professionallığımız və
+          keyfiyyətimizlə müştərilərimiz, tərəfdaşlarımız və cəmiyyət qarşısında
+          etibar və güvən prinsipləri əsasında fəaliyyət göstərməliyik.
+        </p>
+      </div>
+    </section>
+
+    <section class="our-team">
+      <div class="container">
+        <h1>KOMANDAMIZIN ÜZVLƏRİ</h1>
+        <div class="uzvler">
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="IMG/gulnar.jpeg" alt="" /> {% endcomment %}
+              <img src="{% static 'IMG/gulnar.jpeg' %}" alt="">
+            </div>
+            <span> <strong>Gülnar Ağayeva</strong> </span>
+            <span>Founder</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/gunaii.jpg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/gunaii.jpg' %}" alt="">
+            </div>
+            <span> <strong>Günay Həsənbəyli</strong> </span>
+            <span
+              >Team Lead <br />
+              (Front-end Development)
+            </span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/celil.JPG" alt="" /> {% endcomment %}
+              <img src="{% static 'img/celil.JPG' %}" alt="">
+            </div>
+            <span> <strong>Cəlil Abbaslı</strong> </span>
+            <span>Marketing and corporate relations manager</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/nihad-m.jpg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/nihad-m.jpg' %}" alt="">
+            </div>
+            <span> <strong>Nihad Mustafayev</strong> </span>
+            <span>Back-end Developer</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/mohammad.jpeg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/mohammad.jpeg' %}" alt="">
+            </div>
+            <span> <strong>Məhəmməd Mustafazadə</strong> </span>
+            <span>Back-end Developer</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/rahil.jpg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/rahil.jpg' %}" alt="">
+            </div>
+            <span> <strong>Rahil Əliyev</strong> </span>
+            <span>Front-end Developer</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img
+                src="img/WhatsApp Image 2021-12-11 at 2.29.03 PM.jpeg"
+                alt=""
+              /> {% endcomment %}
+
+              <img src="{% static 'img/WhatsApp Image 2021-12-11 at 2.29.03 PM.jpeg' %}"
+              alt=""
+              />
+            </div>
+            <span> <strong>Elvin Cabbarlı</strong> </span>
+            <span>Front-end Developer</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/agaxan.jpeg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/agaxan.jpeg' %}" alt="">
+            </div>
+            <span> <strong>Ağaxan Sərxanov</strong> </span>
+            <span>Front-end Developer</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/Mugan.jpeg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/Mugan.jpeg' %}" alt="">
+            </div>
+            <span> <strong>Muğan Verdiyev </strong> </span>
+            <span>Front-end Developer</span>
+          </div>
+
+          <div class="team-member">
+            <div class="team-img">
+              {% comment %} <img src="img/kubra.jpg" alt="" /> {% endcomment %}
+              <img src="{% static 'img/kubra.jpg' %}" alt="">
+            </div>
+            <span> <strong>Kübra Cəfərzadə</strong> </span>
+            <span>Front-end Developer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer">
+        <div class="row">
+          <div class="col-4 logo">
+            {% comment %} <a href="index.html">
+              <img src="img/medtrip-log-white.png" alt=""
+            /></a> {% endcomment %}
+
+            <a href="index.html">
+              <img src=" {% static 'img/medtrip-log-white.png' %}" alt=""
+            /></a>
+          </div>
+          <div class="col-4">
+            <p style="font-size: 20px">Ofis</p>
+            <p>
+              INNOLAND Inkubasiya və Akselerasiya Mərkəzi, 89 Atatürk prospekti,
+              Bakı
+            </p>
+          </div>
+
+          <div class="col-4">
+            <a
+              href="https://www.linkedin.com/company/80728702/"
+              target="_blank"
+            >
+              <img
+                src="{% static 'svg/linkedin.svg' %}"
+                class="imghover"
+                style="margin-right: 15px"
+            /></a>
+
+            <a
+              href="https://www.facebook.com/MedTrip-100141475850103/"
+              target="_blank"
+            >
+              <img
+                src="{% static 'svg/facebook.svg' %}"
+                class="imghover"
+                style="margin-right: 15px"
+            /></a>
+
+            <a
+              href="https://www.facebook.com/MedTrip-100141475850103/"
+              target="_blank"
+            >
+              <img src="{% static 'svg/instagram.svg' %}" class="imghover"
+            /></a>
+            <p style="padding-top: 20px">
+              © 2021. Bütün müəllif hüquqları qorunur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  {% comment %} <script src="js/main.js"></script> {% endcomment %}
+  <script src="{% static 'js/main.js' %}"></script>
+</html>

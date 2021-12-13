@@ -1,0 +1,48 @@
+.animation-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 1.5s ease-in-out;
+}
+
+.animation-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 1.5s ease-in-out;
+}
+
+.animation-bottom {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1.5s ease-in-out;
+}
+
+.animation-top {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 1.5s ease-in-out;
+}
+
+.header-content .text--area.visible,
+.header-content .image-area.visible,
+.header-content .sosial-icons.visible,
+.slide-text .position.visible,
+.owl-carousel.visible,
+.section_title.visible,
+.sanatory_sectio .sanatory_section_cardlist.visible,
+.sanatory_section2 .section_title2.visible,
+.sanatory_section2 .sanatory_section_cardlist.visible,
+.sanatory_section .section_title.visible,
+.sanatory_section .sanatory_section_cardlist.visible,
+.sanatory_section2 .section_title3.visible,
+.reabilitation.visible,
+.healthyHead.visible,
+.tourCard.visible,
+.facilities .title.visible,
+.product-grid.visible,
+.back .text.visible,
+.back .col-7.visible,
+.back .col-5.visible,
+.footer.visible {
+  transform: translateX(0px);
+  opacity: 1;
+}

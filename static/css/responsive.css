@@ -1,0 +1,381 @@
+@media only screen and (max-width: 1024px) {
+  nav .hamburger-menu {
+    display: flex;
+  }
+  nav ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    top: -60%;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-in-out;
+    width: 100%;
+    z-index: 11;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 20px;
+  }
+  .nav-menu-content a {
+    color: black;
+  }
+
+  .slide-out {
+    background-color: white;
+    color: black;
+    top: 0%;
+  }
+
+  .section-slide .my-container {
+    width: 50%;
+  }
+  .position {
+    position: static;
+    padding: 20px 0;
+  }
+
+  .section-slide {
+    height: initial;
+  }
+  .sanatory_section_card > div {
+    width: 100%;
+  }
+
+  .load_more_link2 {
+    justify-content: center !important;
+    margin: 20px 0;
+  }
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .back .row .col-7 .col-6 {
+    width: 100%;
+  }
+
+  .back .row .col-7,
+  .back .row .col-5 {
+    width: 100% !important;
+  }
+
+  .paragraph-2 {
+    width: 50%;
+  }
+
+  .sanatory_section .row,
+  .sanatory_section_cardlist .row {
+    flex-direction: column;
+  }
+  .sanatory_section2 .row {
+    flex-direction: column-reverse;
+  }
+  .back .row .col-5 {
+    display: none;
+  }
+
+  .submenu {
+    top: 260px;
+    flex-direction: row;
+    height: 20%;
+    flex-wrap: wrap;
+  }
+  .submenu li {
+    margin-right: 10px;
+  }
+  footer {
+    height: initial;
+  }
+
+  /* PRODUCT PAGE */
+
+  .product-section form,
+  .sanatory-next-page form {
+    flex-direction: column;
+  }
+  .product-section form .region,
+  .sanatory-next-page form .region {
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .product-section form .region select,
+  .product-section form .region input,
+  .sanatory-next-page form .region select,
+  .sanatory-next-page form .region input {
+    margin: 0;
+  }
+  .product-section .all-products,
+  .sanatory-next-page .all-products {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8%;
+    row-gap: 80px;
+  }
+  .user_registration img,
+  .about img,
+  .registration_method .col-6:last-child img,
+  .payment_method .col-6:last-child img {
+    width: 100%;
+  }
+
+  .registration_method .col-6 button {
+    font-size: 14px;
+  }
+  .product-details img {
+    width: 100%;
+  }
+
+  .d-flex .first-row:first-child {
+    margin-left: 0;
+  }
+  .order-table {
+    flex-direction: column;
+  }
+  .order-table .left-inputs {
+    width: 100%;
+  }
+  .order-table-right,
+  .first-row {
+    width: 100%;
+  }
+  .order-btn,
+  .enter,
+  .email {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .header-content {
+    flex-direction: column;
+    margin: 0;
+  }
+  .text--area {
+    width: 100%;
+  }
+  .header-content .icons {
+    width: initial;
+  }
+  .section-slide .owl-carousel {
+    margin: 0;
+    top: -80px;
+  }
+  .our-team .container .uzvler {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owl-carousel {
+    top: 0;
+    margin: 0;
+  }
+
+  .back input[type="submit"] {
+    width: 100%;
+  }
+  .footer .address {
+    width: 100%;
+  }
+  .companyRegistration .col-6:last-child,
+  .introduction .col-6:last-child,
+  .newPassword .col-6:last-child,
+  .password_recovery .col-6:last-child,
+  .have_account .col-6:last-child,
+  .payment_method .col-6:last-child,
+  .profile_height .form-image,
+  .completed .col-6:last-child,
+  .registration_method .col-6:last-child,
+  .user_registration .col-6:last-child {
+    display: none;
+  }
+  .companyRegistration .col-6:first-child,
+  .introduction .col-6:first-child,
+  .newPassword .col-6:first-child,
+  .password_recovery .col-6:first-child,
+  .have_account .col-6:first-child,
+  .payment_method .col-6:first-child,
+  .completed .col-6:first-child,
+  .profile_height .form,
+  .registration_method .col-6:first-child,
+  .user_registration .col-6:first-child {
+    width: 100%;
+  }
+
+  .product-section .all-products,
+  .sanatory-next-page .all-products {
+    grid-template-columns: 1fr;
+  }
+  .product-section .product,
+  .sanatory-next-page .product {
+    width: 100%;
+  }
+  .product-section form .region,
+  .sanatory-next-page form .region {
+    flex-direction: column;
+  }
+  .product-section form .region input,
+  .product-section form .region select,
+  .sanatory-next-page form .region select,
+  .sanatory-next-page form .region input {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .product-section form .region,
+  .sanatory-next-page form .region {
+    margin: 0 0 20px 0;
+  }
+  .d-flex {
+    flex-direction: column;
+  }
+  .d-flex .first-row {
+    margin: 0;
+  }
+  .tours-section .project-slide {
+    display: none;
+  }
+  .tours-section .tours-icons {
+    align-items: initial;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+  .header-animation {
+    width: 100% !important;
+  }
+  .whatsapp,
+  .wrapper {
+    display: none;
+  }
+  .sanatory_section_card > div {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .order .product_container1,
+  .order .product_container2 {
+    height: inherit;
+    flex-direction: column;
+    align-items: center;
+  }
+  .order .product_container1 .price-and-info,
+  .order .product_container2 .price-and-info {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: static;
+    margin: 20px;
+  }
+  .order .product_container1 .price-and-info .price_button,
+  .order .product_container2 .price-and-info .price_button {
+    padding-right: 0;
+    margin-top: 20px;
+  }
+  .order .product_container1 .price-and-info .count,
+  .order .product_container2 .price-and-info .count {
+    width: 100%;
+  }
+  .order .img {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  nav ul li {
+    margin: 10px;
+  }
+
+  .section-slide {
+    margin-top: 130px;
+  }
+  .section-slide .my-container {
+    float: none;
+    width: 96%;
+  }
+
+  .section-slide .owl-carousel {
+    top: -130px;
+  }
+
+  .position {
+    padding: 180px 0 10px 0;
+  }
+  .paragraph-2 {
+    width: 100%;
+  }
+
+  .section_title,
+  .section_title2,
+  .section_title3 {
+    font-size: 22px !important;
+  }
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .row .col-4 {
+    text-align: left;
+  }
+
+  .product-grid .row .col-md-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .facilities .products {
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+  }
+
+  footer {
+    padding: 30px;
+  }
+  footer .row .col-4,
+  footer .row .col-4:last-child {
+    text-align: center;
+    width: 100%;
+  }
+  .our-team .container .uzvler {
+    grid-template-columns: 1fr;
+  }
+
+  .product-details form button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .profile_height button {
+    padding: 12px;
+  }
+  .tours-section .btn-right {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .tours-section .tour-button button {
+    width: 100%;
+  }
+  .tour-button {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .section-slide .position {
+    text-align: center;
+  }
+
+  .owl-carousel {
+    top: -125px;
+  }
+}
