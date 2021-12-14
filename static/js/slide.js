@@ -16,7 +16,7 @@ $(".product-slide").owlCarousel({
     items: 1,
     dots: false,
     navText: [
-        "<img src='./static/img/arrowRight.png'>",
-        "<img src='./static/img/arrow-right.png'>",
+        "<img src='../img/arrowRight.png'>",
+        "<img src='../img/arrow-right.png'>",
     ],
 });
