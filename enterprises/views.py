@@ -10,6 +10,8 @@ from . models import CommentModel, EnterpriseModel, TourModel
 from .forms import CommentForm,EnterpriseRegisterForm
 # Create your views here.
 
+def company_registration(request):
+    return render(request,'company_registration.html')
 
 def index(request):
     """market = Item.objects.all()
