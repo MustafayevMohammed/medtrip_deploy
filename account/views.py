@@ -49,8 +49,7 @@ def logout(request):
 def about_page(request):
     return render(request,'about.html')
 
-def company_registration(request):
-    return render(request,'company_registration.html')
+
 
 def registration_method(request):
     return render(request,'registration_method.html')

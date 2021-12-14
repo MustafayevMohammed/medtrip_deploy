@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import about_page, company_registration, profile, register,loginPage,logout, registration_completed, registration_method
+from .views import about_page, profile, register,loginPage,logout, registration_completed, registration_method
 
 
 app_name ='account'
@@ -12,6 +12,6 @@ urlpatterns = [
     path('logout/',logout,name ='logout'),
     path('about/',about_page,name = 'about_page'),
     path('registration_completed/',registration_completed,name = 'registration_completed'),
-    path('company_registration',company_registration,name ='company_registration')
+    
 
 ]
