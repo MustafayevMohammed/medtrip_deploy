@@ -62,7 +62,7 @@ def detailpage(request,id):
             data.save()
             return redirect('enterprises:detail',id=id)
             
-    return render(request,'detailpage.html',context={
+    return render(request,'tours1.html',context={
         'enterprise_query':enterprise_query,
         'comments':comments,
         "user_comment":user_comment
@@ -86,8 +86,8 @@ def create_enterprise(request):
 
     return render(request,"create_enterprise.html",context)
 
-def tours(request):
-    return render(request,'tours1.html')
+# def tours(request):
+#     return render(request,'tours1.html')
 
 def sanatory(request):
     return render(request,'sanatory.html')
