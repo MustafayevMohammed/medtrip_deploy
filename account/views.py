@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate,login as auth_login,logout as auth_logout
+
+from account.models import CustomUserModel
 from . import forms
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
@@ -9,16 +11,25 @@ from django.core.exceptions import ValidationError
 # Create your views here.
 @csrf_protect
 def register(request):
-    """form = forms.RegisterForm()
-    if request.method == "POST":
-        form = forms.RegisterForm(request.POST)
+    if request.method == 'POST':
+        form  = forms.RegisterForm()
         if form.is_valid():
-            newUser= form.save(commit=False)
-            newUser.save()
-            return redirect("account:login")
-    context = {
-    "form":form
-        }"""
+            email= form.cleaned_data.get['email']
+            first_name = form.cleaned_data.get['first_name']
+            last_name = form.cleaned_data.get['last_name']
+            country = form.cleaned_data.get['country']
+            password1 = form.cleaned_data.get['password1']
+            password2 = form.cleaned_data.get['password2']
+            phone = form.cleaned_data.get['phone']
+            user_model = CustomUserModel.objects.create(
+                emai = email,
+                first_name = first_name,
+                last_name = last_name,
+                password = password1,
+                country  = country,
+                phone = phone
+            )
+            user_model.save()
     return render(request,"user_registration.html")
 
 @csrf_protect
