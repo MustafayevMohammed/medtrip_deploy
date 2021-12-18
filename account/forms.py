@@ -4,14 +4,19 @@ from django.forms import fields, widgets
 from django.forms.forms import Form
 from django.contrib.auth.models import User
 from django.conf import settings
+from phonenumber_field.modelfields import PhoneNumberField
+
+from enterprises.models import CountryModel
 from . models import CustomUserModel
 
 class RegisterForm(UserCreationForm):
-    #image = forms.FileField(required=False,label="Image*",widget=forms.FileInput(attrs={'class':'fields'}))
+
     email = forms.EmailField(label="Mail ünvaniniz",widget=forms.EmailInput(attrs={'class':'fields'}))
     first_name = forms.CharField(label="Adınız",widget=forms.TextInput(attrs={'class':'fields'}))
     last_name = forms.CharField(label="Soyadınız",widget=forms.TextInput(attrs={'class':'fields'}))
 
+    country  = forms.ModelChoiceField(queryset=CountryModel.objects.all())
+    phone = PhoneNumberField()
     password1 = forms.CharField(
         label="Parol",
         widget=forms.PasswordInput(attrs={'class':'passfields','style':'text-align:center; margin-left:180px; width:65%; border-radius:3px;'})
