@@ -37,6 +37,17 @@
     <title>MedTrip</title>
   </head>
   <body>
+    <section class="loader">
+      <lottie-player
+        src="{% static 'img/loading.json' %}"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px"
+        loop
+        autoplay
+      ></lottie-player>
+      <span>Yüklənir...</h2>
+  </section>
     <header>
 
       <div class="header-container">
@@ -970,7 +981,7 @@
               <div class="card text-center">
                 <img
                   class="card-img-top"
-                  src="./img/Intersect6.png"
+                  src="{% static 'img/Intersect6.png' %}"
                   alt="productimage6"
                 />
                 <a href="#">I'm from Skin Care</a>

@@ -19,6 +19,17 @@
 </head>
 
 <body>
+  <section class="loader">
+    <lottie-player
+      src="{% static 'img/loading.json' %} "
+      background="transparent"
+      speed="1"
+      style="width: 200px; height: 200px"
+      loop
+      autoplay
+    ></lottie-player>
+    <span>Yüklənir...</h2>
+</section>
   <header class="no-height">
     <div class="header-container">
       <div class="container">
@@ -161,6 +172,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="{% static 'js/slide.js'"></script>
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
 </body>

@@ -49,6 +49,17 @@
     <title>MedTrip</title>
   </head>
   <body>
+    <section class="loader">
+      <lottie-player
+        src="{% static 'img/loading.json' %} "
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px"
+        loop
+        autoplay
+      ></lottie-player>
+      <span>Yüklənir...</h2>
+  </section>
     <header class="no-height">
       <div class="header-container">
         <div class="container">
@@ -245,5 +256,7 @@
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
       });
     </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   </body>
 </html>

@@ -73,7 +73,7 @@ form button:hover {
 /* product */
 
 .all-products {
-  margin: 100px 0;
+  margin: 180px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 13%;

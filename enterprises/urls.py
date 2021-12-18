@@ -7,7 +7,6 @@ app_name = 'enterprises'
 urlpatterns = [
     path('',index,name='index'),
     path('sanatory',sanatory,name = 'sanatory'),
-    path('tours',tours,name = 'tours'),
-    path('detail/<str:id>/',detailpage,name ='detail'),
+    path('detail/<str:id>',detailpage,name = 'detail'),
     path('company_registration',company_registration,name ='company_registration')
 ]

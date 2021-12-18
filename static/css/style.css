@@ -235,7 +235,8 @@ footer .row .col-4:last-child {
   margin-bottom: 100px;
   margin-top: 200px;
 }
-.input, select {
+.input,
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -246,7 +247,7 @@ footer .row .col-4:last-child {
 }
 
 input:focus {
-  border: 3px solid #0B5EE8;
+  border: 3px solid #0b5ee8;
 }
 
 input {
@@ -256,12 +257,12 @@ input {
   border-radius: 10px;
   resize: vertical;
   font-size: 16px;
-}  
+}
 
-input[type=submit] {
+input[type="submit"] {
   width: 350px;
   height: 40px;
-  background-color: #0B5EE8;
+  background-color: #0b5ee8;
   color: white;
   padding: auto;
   border: none;
@@ -271,21 +272,20 @@ input[type=submit] {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.loginn{
+.loginn {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
-input[type=submit]:hover{
-  transform:translateY(-3px);
+input[type="submit"]:hover {
+  transform: translateY(-3px);
 }
-form >p{
+form > p {
   text-align: center;
 }
 
-
-.text{
+.text {
   padding-top: 30px;
   margin-bottom: 30px;
   font-weight: 600;
@@ -294,13 +294,14 @@ form >p{
   line-height: 45px;
   letter-spacing: -0.05px;
 }
-.sign-in{
-  color: #9EA0A5;
+.sign-in {
+  color: #9ea0a5;
   font-size: 14px;
 }
 /*user registration*/
 
-.input, select {
+.input,
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 10px 0;
@@ -311,7 +312,7 @@ form >p{
 }
 
 input:focus {
-  border: 3px solid #0B5EE8;
+  border: 3px solid #0b5ee8;
 }
 
 input {
@@ -321,28 +322,27 @@ input {
   border-radius: 10px;
   resize: vertical;
   font-size: 16px;
-}  
+}
 
-input[type=submit] {
+input[type="submit"] {
   width: 350px;
   height: 40px;
-  background-color: #0B5EE8;
+  background-color: #0b5ee8;
   color: white;
   padding: auto;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
-
 }
-.loginn1{
+.loginn1 {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
-input[type=submit]:hover{
-  transform:translateY(-3px);
+input[type="submit"]:hover {
+  transform: translateY(-3px);
 }
 
 .user_registration {
@@ -354,7 +354,8 @@ input[type=submit]:hover{
   margin-top: 0;
 }
 
-.input, select {
+.input,
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 10px 0;
@@ -365,7 +366,7 @@ input[type=submit]:hover{
 }
 
 input:focus {
-  border: 3px solid #0B5EE8;
+  border: 3px solid #0b5ee8;
 }
 
 input {
@@ -375,32 +376,31 @@ input {
   border-radius: 10px;
   resize: vertical;
   font-size: 16px;
-}  
+}
 
-input[type=submit] {
+input[type="submit"] {
   width: 350px;
   height: 40px;
-  background-color: #0B5EE8;
+  background-color: #0b5ee8;
   color: white;
   padding: auto;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
-
 }
-.loginn1{
+.loginn1 {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
 
-input[type=submit]:hover{
-  transform:translateY(-3px);
+input[type="submit"]:hover {
+  transform: translateY(-3px);
 }
 
-.login1>h2{
+.login1 > h2 {
   text-align: center;
   padding-top: 60px;
   margin-bottom: 60px;
@@ -410,21 +410,21 @@ input[type=submit]:hover{
   line-height: 45px;
   letter-spacing: -0.05px;
 }
-.form-check{
+.form-check {
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 14px;
   justify-content: center;
 }
 
-.form-check-input{
+.form-check-input {
   margin: 0;
   padding: 0;
   width: 20px;
   height: 20px;
 }
-.sign-in{
-  color: #9EA0A5;
+.sign-in {
+  color: #9ea0a5;
   font-size: 14px;
 }
 
@@ -432,8 +432,8 @@ input[type=submit]:hover{
   margin-left: 10px;
 }
 
-.modal-bg{
-  position: fixed; 
+.modal-bg {
+  position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -444,13 +444,13 @@ input[type=submit]:hover{
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0,5s;
+  transition: visibility 0s, opacity 0, 5s;
 }
-.bg-active{
+.bg-active {
   visibility: visible;
   opacity: 1;
 }
-.modal{
+.modal {
   position: relative;
   background-color: white;
   width: 50%;
@@ -461,9 +461,8 @@ input[type=submit]:hover{
   flex-direction: column;
   padding: 15px;
   text-align: justify;
-
 }
-.modal-close{
+.modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -471,42 +470,39 @@ input[type=submit]:hover{
   color: #000;
   cursor: pointer;
 }
-.modal-btn{
+.modal-btn {
   border-bottom: 2px solid rgb(158, 156, 156);
   cursor: pointer;
-  color: #9EA0A5;
+  color: #9ea0a5;
 }
 
-
 /* registration completed*/
-input[type=submit] {
+input[type="submit"] {
   width: 360px;
   height: 40px;
-  background-color: #0B5EE8;
+  background-color: #0b5ee8;
   color: white;
   padding: auto;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-
 }
-.completed1{
-  
+.completed1 {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
-input[type=submit]:hover{
-  transform:translateY(-3px);
+input[type="submit"]:hover {
+  transform: translateY(-3px);
 }
 
-.completed{
+.completed {
   margin-top: 200px;
   margin-bottom: 100px;
 }
-.completed_text{
+.completed_text {
   padding-top: 100px;
   text-align: center;
   margin-bottom: 50px;
@@ -517,47 +513,47 @@ input[type=submit]:hover{
   letter-spacing: -0.05px;
 }
 /*registration method*/
-.registration_method{
+.registration_method {
   margin-top: 200px;
   margin-bottom: 100px;
 }
 
 .registration_method .btn:hover {
-  background-color: #0B5EE8;
-  border: 2px solid #0B5EE8;
+  background-color: #0b5ee8;
+  border: 2px solid #0b5ee8;
 }
 
 .foward {
   width: 100%;
 }
 
-.btn{
+.btn {
   width: 100%;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   text-align: left;
   font-weight: 500;
   color: #323232;
-  border: 2px solid #0B5EE8;
+  border: 2px solid #0b5ee8;
 }
-.icon{
+.icon {
   margin-right: 10px;
 }
-.vector{
+.vector {
   float: right;
   margin-top: 2.5%;
 }
-.back{
+.back {
   display: flex;
   justify-content: center;
   padding-top: 50px;
   cursor: pointer;
-  background:none;
+  background: none;
 }
 
 .back a {
   color: #323232;
 }
-.method_text{
+.method_text {
   text-align: center;
   margin-bottom: 50px;
   font-weight: 600;
@@ -568,17 +564,17 @@ input[type=submit]:hover{
 }
 
 /*payment method*/
-.payment_method{
+.payment_method {
   margin-top: 200px;
   margin-bottom: 100px;
 }
 
-.payment_text{
+.payment_text {
   padding-top: 30px;
   margin-bottom: 30px;
   font-weight: 600;
   font-style: normal;
-  font-size:20px;
+  font-size: 20px;
 }
 /*profile*/
 
@@ -586,16 +582,16 @@ input[type=submit]:hover{
   margin-bottom: 100px;
   margin-top: 200px;
 }
-label{
-  margin-top:30px;
+label {
+  margin-top: 30px;
 }
-.profile_btn{
+.profile_btn {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
-.profile_text{
+.profile_text {
   padding-top: 50px;
   padding-bottom: 50px;
   font-weight: 600;
@@ -605,7 +601,7 @@ label{
   letter-spacing: -0.05px;
 }
 
-.password{
+.password {
   float: right;
   right: 10px;
   top: 23px;
@@ -616,19 +612,19 @@ label{
   width: 100%;
 }
 /*password recovery*/
-.password_recovery{
+.password_recovery {
   margin-bottom: 100px;
   margin-top: 200px;
 }
-.btn_recovery{
+.btn_recovery {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
 
-.recovery_text{
-  margin-top:100px;
+.recovery_text {
+  margin-top: 100px;
   margin-bottom: 30px;
   font-weight: 600;
   font-style: normal;
@@ -637,13 +633,13 @@ label{
   letter-spacing: -0.05px;
 }
 /*have an account*/
-.have_account{
+.have_account {
   margin-top: 200px;
   margin-bottom: 100px;
 }
 
-.account_text{
-  margin-top:100px;
+.account_text {
+  margin-top: 100px;
   margin-bottom: 30px;
   font-weight: 600;
   font-style: normal;
@@ -652,21 +648,20 @@ label{
   letter-spacing: -0.05px;
 }
 /*password updated*/
-.password_updated{
-  margin-top: 200px;
-  margin-bottom: 100px;
+.password_updated {
+  margin-top: 280px;
+  margin-bottom: 280px;
 }
-.updated_btn{
+.updated_btn {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
-.updated{
+.updated {
   text-align: center;
-  
 }
-.uptated_head{
+.uptated_head {
   margin-bottom: 25px;
   font-weight: 600;
   font-style: normal;
@@ -674,8 +669,8 @@ label{
   line-height: 45px;
   letter-spacing: -0.05px;
 }
-.uptated_text{
-  font-size: 23px  ;
+.uptated_text {
+  font-size: 23px;
 }
 
 /*company registration*/
@@ -689,9 +684,7 @@ label{
   margin-top: 0;
 }
 
-
-
-.companyRegistration>h2{
+.companyRegistration > h2 {
   text-align: center;
   padding-top: 60px;
   font-weight: 600;
@@ -701,38 +694,36 @@ label{
   letter-spacing: -0.05px;
 }
 
-
-.sign-in{
-  color: #9EA0A5;
+.sign-in {
+  color: #9ea0a5;
   font-size: 14px;
 }
-.company_btn{
+.company_btn {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
 
-.company_btn{
+.company_btn {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
 /*new password*/
-.new_password{
+.new_password {
   margin-top: 200px;
   margin-bottom: 100px;
 }
-.new{
+.new {
   display: flex;
   justify-content: center;
   place-items: center;
   align-items: center;
 }
 
-
-.new_password_text{
+.new_password_text {
   padding-top: 30px;
   margin-bottom: 30px;
   font-weight: 600;
