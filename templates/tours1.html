@@ -51,7 +51,7 @@
   <body>
     <section class="loader">
       <lottie-player
-        src="img/loading.json"
+        src="{% static 'img/loading.json' %} "
         background="transparent"
         speed="1"
         style="width: 200px; height: 200px"
@@ -256,5 +256,7 @@
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
       });
     </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   </body>
 </html>
