@@ -40,7 +40,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUserModel(AbstractUser):
     username = models.CharField(max_length=20,null=True,blank=True)
     email = models.EmailField(_("email address"),unique=True)
-    country = models.ForeignKey(CountryModel,related_name="customers",null=True,blank=False,on_delete=models.SET_NULL)
+    country = models.CharField(max_length=100,null=True,blank=True)
     phone_number = PhoneNumberField(null=True,blank=False)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
