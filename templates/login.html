@@ -60,7 +60,7 @@
                   Digər <i class="fas fa-chevron-down"></i>
                   <ul class="submenu">
                     <li><a href="#wellnes">Sağlamlıq</a></li>
-                    <li><a href="{% url 'enterprises:tours' %}">Turlar və Servis</a></li>
+                    <li><a href="{% url 'enterprises:detail' %}">Turlar və Servis</a></li>
                     <li><a href="{% url 'market:product' %}">Məhsullar</a></li>
                     <li><a href="#contact">Məsləhət</a></li>
                     <li><a href="{% url 'account:about_page' %}">Haqqımızda</a></li>
@@ -104,7 +104,8 @@
               <a href="{% url  'account:registration_method' %}">Qeydiyyat</a>
             </p>
             <div>
-              <form>
+              <form method="post" action="">
+                {% csrf_token %}
                 <input
                   type="e-mail"
                   id="lname"
@@ -115,13 +116,13 @@
                 <input
                   type="password"
                   id="lname"
-                  name="lastname"
+                  name="password"
                   placeholder="Şifrəniz"
                   class="input"
                 />
 
                 <div class="loginn"><input type="submit" value="Giriş" /></div>
-                <p class="sign-in"><a href="#">Şifrənizi unutmusunuz?</a></p>
+                <p class="sign-in"><a href="{% url 'account:password_recovery' %}">Şifrənizi unutmusunuz?</a></p>
               </form>
             </div>
           </div>

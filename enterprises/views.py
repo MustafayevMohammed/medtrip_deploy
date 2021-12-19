@@ -43,10 +43,10 @@ def index(request):
 #      'comments':comments
 #     })
 
-def detailpage(request,id):
-    enterprise_query = EnterpriseModel.objects.get(id=id)
-    comments = CommentModel.objects.filter(enterprise=enterprise_query)
-    user_comment = CommentModel.objects.filter(author = request.user).first
+def detailpage(request):
+    #enterprise_query = EnterpriseModel.objects.get(id=id)
+    #comments = CommentModel.objects.filter(enterprise=enterprise_query)
+    #user_comment = CommentModel.objects.filter(author = request.user).first
 
     if request.method == "POST":
         form = CommentForm(request.POST)
@@ -60,12 +60,12 @@ def detailpage(request,id):
             data.rating = form.cleaned_data["rating"]
             data.count += 1
             data.save()
-            return redirect('enterprises:detail',id=id)
+            return redirect('enterprises:detail')
             
     return render(request,'tours1.html',context={
-        'enterprise_query':enterprise_query,
-        'comments':comments,
-        "user_comment":user_comment
+        #'enterprise_query':enterprise_query,
+        #'comments':comments,
+        #"user_comment":user_comment
         })
 
 def create_enterprise(request):
