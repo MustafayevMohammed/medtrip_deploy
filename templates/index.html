@@ -58,14 +58,14 @@
             </div>
             <div class="navbar-content nav-menu-content">
               <ul>
-                <li><a href="{% url 'enterprises:sanatory' %}">Sanatoriyum və Kurortlar</a></li>
+                <li><a href="{% url 'enterprises:sanatory' %}">Sanatorium və Kurortlar</a></li>
                 <li><a href="#cosmetology">Reabilitasiya və Bərpa</a></li>
                 <li><a href="#cosmetology">Kosmetologiya və üz qulluğu</a></li>
                 
                 <li> Digər <i class="fas fa-chevron-down"></i>
                   <ul class="submenu">
                     <li><a href="#wellnes">Sağlamlıq</a></li>
-                    <li><a href="{% url 'enterprises:tours' %}">Turlar və Servis</a></li>
+                    <li><a href="{% url 'enterprises:detail' %}">Turlar və Servis</a></li>
                     <li><a href="{% url 'market:product' %}">Məhsullar</a></li>
                     <li><a href="#contact">Məsləhət</a></li>
                     <li><a href="{% url 'account:about_page' %}">Haqqımızda</a></li>
@@ -112,8 +112,8 @@
           <div class="text--area animation-left">
             <h1>Sağlamlıq turizminin aktuallığı</h1>
             <p>
-              Bu platformanın əsas məqsədi insanların daha tibbi məhsullardan  deyil də təbii müalicə üsullarından və təbii məhsullardan istifadə etməsidir.
-              Ümumilikdə isə əsas hədəfimiz insanların yaşadığı gərginlikdən və müxtəlif sağlamlıq problemlərdən
+              Bu platformanın əsas məqsədi insanların daha tibbi məhsullardan  deyil də, təbii müalicə üsullarından və təbii məhsullardan istifadə etməsidir.
+              Ümumilikdə isə əsas hədəfimiz insanların yaşadığı gərginlikdən və müxtəlif sağlamlıq problemlərindən
               qurtarılmasına vasitəçilik etməkdir.
             </p>
 
@@ -160,7 +160,7 @@
             {% comment %} <img src="img/im2.jpg" /> {% endcomment %}
             <img src="{% static 'img/im2.jpg' %}" alt="">
             <div class="details-1">
-              <a href="{% url 'enterprises:tours' %}">
+              <a href="{% url 'enterprises:detail' %}">
                 <div class="content-1">
                   <h4>Title 2</h4>
                   <p>
@@ -176,7 +176,7 @@
             {% comment %} <img src="img/im3.jpg" /> {% endcomment %}
             <img src="{% static 'img/im3.jpg' %}" alt="">
             <div class="details-1">
-              <a href="{% url 'enterprises:tours' %}">
+              <a href="{% url 'enterprises:detail' %}">
                 <div class="content-1">
                   <h4>Title 3</h4>
                   <p>
@@ -192,7 +192,7 @@
             {% comment %} <img src="img/im1.jpg" /> {% endcomment %}
             <img src="{% static 'img/im1.jpg' %}">
             <div class="details-1">
-              <a href="{% url 'enterprises:tours' %}">
+              <a href="{% url 'enterprises:detail' %}">
                 <div class="content-1">
                   <h4>title 4</h4>
                   <p>
@@ -224,7 +224,7 @@
     <section class="sanatory_sectio" id="sanatorium">
       <div class="container">
         <div class="sanatory_section_container">
-          <h2 class="section_title animation-top">SANATORIALAR VƏ KURORTLAR</h2>
+          <h2 class="section_title animation-top">SANATORIUMLAR VƏ KURORTLAR</h2>
           <div class="sanatory_section_cardlist animation-left">
             <div class="row">
               <div class="col-lg-10 col-md-12">
@@ -262,7 +262,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -303,7 +303,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -342,7 +342,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -353,7 +353,7 @@
                 </div>
               </div>
               <div class="col-lg-2 col-md-12 load_more_link">
-                <a href="{% url 'enterprises:sanatory' %}" class="section_load_more">Daha çox >></a>
+                <a href="{% url 'market:product' %}" class="section_load_more">Daha çox >></a>
               </div>
             </div>
           </div>
@@ -404,7 +404,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -443,7 +443,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -482,7 +482,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -538,7 +538,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -578,7 +578,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -617,7 +617,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -679,7 +679,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -718,7 +718,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -757,7 +757,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -812,7 +812,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -851,7 +851,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>
@@ -890,7 +890,7 @@
                             <i class="clock_icon"></i>
                             <p>1 gün</p>
                           </div>
-                          <a href="{% url 'enterprises:tours' %}" class="sanatory_card_gomore_more"
+                          <a href="{% url 'enterprises:detail' %}" class="sanatory_card_gomore_more"
                             >Daha Ətraflı</a
                           >
                         </div>

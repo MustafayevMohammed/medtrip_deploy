@@ -60,7 +60,7 @@
                   Digər <i class="fas fa-chevron-down"></i>
                   <ul class="submenu">
                     <li><a href="#wellnes">Sağlamlıq</a></li>
-                    <li><a href="{% url 'enterprises:tours' %}">Turlar və Servis</a></li>
+                    <li><a href="{% url 'enterprises:detail' %}">Turlar və Servis</a></li>
                     <li><a href="{% url 'market:product' %}">Məhsullar</a></li>
                     <li><a href="#contact">Məsləhət</a></li>
                     <li><a href="{% url 'account:about_page' %}">Haqqımızda</a></li>
@@ -103,22 +103,34 @@
               Sizin artıq hesabınız varmı? <a href="{% url 'account:login' %}"> Giriş</a>
             </p>
             <div>
-              <form>
+              {% if form.errors %}
+                  {% for field in form %}
+                    {% for error in field.errors %} 
+                      <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                      </div>
+                    {% endfor %}
+                {% endfor %}
+              {% endif %}
+              <form method="post" action="">
+                {% csrf_token %}
                 <input
                   type="text"
                   id="fname"
-                  name="firstname"
+                  name="first_name"
                   placeholder="Adınız"
                   class="input"
                   required
+                  
                 />
                 <input
                   type="text"
                   id="lname"
-                  name="lastname"
+                  name="last_name"
                   placeholder="Soyadınız"
                   class="input"
                   required
+                  
                 />
                 <input
                   type="e-mail"
@@ -127,32 +139,36 @@
                   placeholder="E-mailiniz"
                   class="input"
                   required
+                  
                 />
                 <input
                   type="tel"
-                  name="phone"
+                  name="phone_number"
                   id="phone"
                   placeholder="Nömrəniz"
                   class="input"
                   required
+                  
                 />
                 <input
                   type="password"
                   id="lname"
-                  name="lastname"
+                  name="password1"
                   placeholder="Şifrəniz"
                   class="input"
                   required
+                  
                 />
                 <input
                   type="password"
                   id="lname"
-                  name="lastname"
+                  name="password2"
                   placeholder="Şifrənizi təsdiqləyin"
                   class="input"
                   required
+                  
                 />
-                <select name="catogory" required>
+                <select name="country" required>
                   <option value="">Ölkənizi seçin</option>
                   <option value="azərbaycan">Azərbaycan</option>
                   <option value="usa">USA</option>
