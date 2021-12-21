@@ -35,7 +35,10 @@ def register(request):
                 customer.save()
                 return redirect('/')
             else:
-                return HttpResponse('sehv var')
+                print(form)
+                print("Invalid Form")
+                print(form.errors)
+                return render (request, 'user_registration.html',{'form':form})
         return render(request,"user_registration.html")
 
 @csrf_protect
