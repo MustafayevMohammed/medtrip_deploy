@@ -108,7 +108,17 @@
               Sizin artıq hesabınız varmı? <a href="{% url 'account:login' %}"> Giriş</a>
             </p>
             <div>
-              <form>
+              {% if form.errors %}
+                {% for field in form %}
+                  {% for error in field.errors %} 
+                    <div class="alert alert-danger">
+                          <strong>{{ error|escape }}</strong>
+                    </div>
+                  {% endfor %}
+                {% endfor %}
+              {% endif %}
+              <form method="post" action="">
+                {% csrf_token %}
                 <input
                   type="text"
                   id="fname"
@@ -125,12 +135,21 @@
                   class="input"
                   required
                 />
+                <select id="category" name="category" required>
+                  <option value="">Ölkə</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select> 
+                
+
                 <select id="country" name="country" required>
                   <option value="">Kateqoriya</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                  <option value="">C</option>
-                </select>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select> 
+
                 <input
                   type="e-mail"
                   id="lname"
@@ -147,7 +166,7 @@
                   class="input"
                   required
                 />
-                <input
+                 <input
                   type="password"
                   id="lname"
                   name="password1"
@@ -164,11 +183,6 @@
                   required
                 />
 
-                <select name="country" id="country" required>
-                   {% for country in countries %}
-                     <option value="{{country.id}}"><img src="{{country.flag.url}}" alt=""></option>
-                   {% endfor %}
-                </select>
 
                 <div class="form-check">
                   <input
@@ -292,6 +306,6 @@
       });
     </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

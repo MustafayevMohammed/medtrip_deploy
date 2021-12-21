@@ -1,18 +1,48 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
-
+from account.models import CustomUserModel
 # Create your views here.
 from django.shortcuts import redirect, render
 
-from market.models import Item, ProductCategory
+from market.models import Customer, Item, ProductCategory
 
 #from market.models import  Product
-from . models import CommentModel, EnterpriseModel, TourModel, CountryModel
+from . models import CategoryModel, CommentModel, EnterpriseModel, TourModel, CountryModel
 from .forms import CommentForm,EnterpriseRegisterForm
+from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
+@csrf_protect
 def company_registration(request):
     countries = CountryModel.objects.all()
-    return render(request,'company_registration.html')
+    categories = CategoryModel.objects.all()
+    if request.method == "POST":
+        form = EnterpriseRegisterForm(request.POST)
+        print(form.errors)
+        if form.is_valid():
+            data = EnterpriseModel()
+            owner = CustomUserModel.objects.filter(
+                email = request.user
+            ).first()
+            data.owner = owner
+            data.name = form.cleaned_data["name"]
+            data.authorized_person = form.cleaned_data["authorized_person"]
+            data.number = form.cleaned_data["number"]
+            data.category = form.cleaned_data["category"]
+            data.country = form.cleaned_data["country"]
+            data.save()
+            return redirect("/")
+        else:
+            print(form)
+            print("Invalid Form")
+            print(form.errors)
+            return render (request, 'company_registration.html',{'form':form})
+
+    context = {
+        "countries":countries,
+        "categories":categories
+    }
+    return render(request,'company_registration.html',context)
 
 def index(request):
     """market = Item.objects.all()
