@@ -14,12 +14,14 @@ from django.core.exceptions import ValidationError
 def register(request):
     if request.method == "POST":
         form  = RegisterForm(data=request.POST)
-        print(form.errors)
         if form.is_valid():
             form.save()
             return redirect('/')
         else:
-            return HttpResponse('sehv var')
+            print(form)
+            print("Invalid Form")
+            print(form.errors)
+            return render(request, 'user_registration.html',{'form':form})
     return render(request,"user_registration.html")
 
 @csrf_protect
