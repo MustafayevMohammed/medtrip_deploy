@@ -46,7 +46,7 @@
         loop
         autoplay
       ></lottie-player>
-      <span>Yüklənir...</h2>
+      <span>Yüklənir...</span>
   </section>
     <header>
 
@@ -996,7 +996,7 @@
           <span style="border-bottom: 2px solid rgb(142, 146, 142);">
             
             <span>Daha çox</span>
-            <img src="svg/arroww.svg" alt="">
+            <img src='{% static "svg/arroww.svg" %}'  alt="">
             </span>
         </a>
         
@@ -1005,51 +1005,56 @@
 
     <section class="back" id="contact">
       <div class="container">
+        <h1 class="text animation-left">MƏSLƏHƏT</h1>
         <div class="row">
-          <div class="col-12">
-            <h1 class="text animation-left">MƏSLƏHƏT</h1>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-7 animation-left">
+          <form class="col-7 animation-left">
             <div class="row">
               <div class="col-6 mb-4">
-                <input type="text" name="firstname" placeholder="Adınız" />
+                <div class="form-box">
+                  <input type="text" name="firstname" placeholder="Adınız" />
+                </div>
               </div>
               <div class="col-6 mb-4">
-                <input
-                  type="text"
-                  name="lastname"
-                  placeholder="Soyadınız"
-                /><br />
+                <div class="form-box">
+                  <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Soyadınız"
+                  /><br />
+                </div>
               </div>
             </div>
             <div>
               <div class="mb-4">
-                <input type="email" name="email" placeholder="E-mailiniz" />
+                <div class="form-box">
+                  <input type="email" name="email" placeholder="E-mailiniz" />
+                </div>
               </div>
               <div class="mb-4">
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  placeholder="Mobil Nömrəniz"
-                />
+                <div class="form-box">
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    placeholder="Mobil Nömrəniz"
+                  />
+                </div>
               </div>
-              <div class="mb-4" style="position: relative">
-                <input type="voice" />
-                <img src="{% static 'img/vector.png' %} " class="recorder" />
-              </div>
-
               <div class="mb-4">
-                <textarea></textarea>
+                <textarea name="textarea"></textarea>
               </div>
-              <button type="submit"> Məsləhət alın </button> 
+              <button type="submit">Məsləhət alın</button>
             </div>
-          </div>
+          </form>
           <div class="col-5 animation-right">
-            <lottie-player src="{% static 'img/animation-advice.json' %} "  background="transparent"  speed="1" style="width: 100%; height: 520px;" loop autoplay></lottie-player>
+            <lottie-player
+              src="{% static 'img/animation-advice.json' %}"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: 520px"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </div>

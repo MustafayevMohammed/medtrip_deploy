@@ -7,7 +7,7 @@ from market.models import Item, ProductCategory
 
 #from market.models import  Product
 from . models import CommentModel, EnterpriseModel, TourModel, CountryModel
-from .forms import CommentForm,EnterpriseRegisterForm
+from .forms import AdviceForm, CommentForm,EnterpriseRegisterForm
 # Create your views here.
 
 def company_registration(request):
@@ -25,6 +25,11 @@ def index(request):
     })"""
     return render(request,'index.html')
 
+#"def advice_send(request):
+    #data = AdviceForm(data=request.POST)
+    #if data.is_valid():
+    #    data
+    
 
 # def detailpage(request,id):
 #     enterprise_query = EnterpriseModel.objects.get(id=id)
