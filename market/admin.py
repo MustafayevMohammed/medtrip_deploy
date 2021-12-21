@@ -12,6 +12,8 @@ admin.site.register(OrderItem)
 
 admin.site.register(Order)
 
-admin.site.register(Customer)
+@admin.register(Customer)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display=('email','phone_number')
 
 admin.site.register(ProductCategory)
