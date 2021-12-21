@@ -9,19 +9,21 @@ from django.conf import settings
 
 #-----------------------------------------------------------------------------------------
 class Customer(models.Model):
+    first_name = models.CharField(max_length=200,null=True,blank=True)
+    last_name = models.CharField(max_length = 200,null=True,blank=True)
+    country = models.CharField(max_length=100,null=True,blank=True)
     user = models.ForeignKey("account.CustomUserModel",on_delete=models.CASCADE)
-    username = models.CharField(max_length=20)
     email = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=20,verbose_name='phone number')
 
     def _str_(self):
-        return self.username
+        return self.user.get_email()
 #-------------------------------------------------------------------------------------------
 class ProductCategory(models.Model):
     name = models.CharField(max_length=100,verbose_name='kateqoriyalar')
 
     def _str_(self):
-        return self.name
+        return self.email
 #------------------------------------------------------------------------------------------
 class Item(models.Model):
     title = models.CharField(max_length=100)
