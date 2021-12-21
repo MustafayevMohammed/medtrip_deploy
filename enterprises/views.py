@@ -6,11 +6,12 @@ from django.shortcuts import redirect, render
 from market.models import Item, ProductCategory
 
 #from market.models import  Product
-from . models import CommentModel, EnterpriseModel, TourModel
+from . models import CommentModel, EnterpriseModel, TourModel, CountryModel
 from .forms import CommentForm,EnterpriseRegisterForm
 # Create your views here.
 
 def company_registration(request):
+    countries = CountryModel.objects.all()
     return render(request,'company_registration.html')
 
 def index(request):
