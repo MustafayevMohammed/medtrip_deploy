@@ -8,25 +8,18 @@ from django.utils.translation import ugettext_lazy as _
 class CommentForm(forms.ModelForm):
     
     class Meta:
-        widgets = {
-            "content" : forms.Textarea(attrs={"class":"fields",
-            "cols":81,
-            "rows":6,
-            "style":"resize:none;"}),
-        }
+
         model = models.CommentModel
         fields = ["content","rating"]
 
 
 class EnterpriseRegisterForm(forms.ModelForm):
    
-    accept_terms = forms.BooleanField()
 
     class Meta:
         model = models.EnterpriseModel
 
-        fields = ["name","authorized_person","number","services","category","country","address","accept_terms"]
-
+        fields = ["name","authorized_person","number","category","country"]
 
 class AdviceForm(forms.Form):
     firstname = forms.CharField(max_length=100)
