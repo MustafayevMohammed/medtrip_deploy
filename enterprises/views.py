@@ -68,23 +68,7 @@ def detailpage(request):
         #"user_comment":user_comment
         })
 
-def create_enterprise(request):
-    form = EnterpriseRegisterForm()
 
-    if request.method == "POST":
-        form = EnterpriseRegisterForm(request.POST)
-        if form.is_valid():
-            instance = form.save(commit=False)
-            instance.owner = request.user
-            instance.save()
-            return redirect("/")
-
-
-    context = {
-        "form":form
-    }
-
-    return render(request,"create_enterprise.html",context)
 
 # def tours(request):
 #     return render(request,'tours1.html')
