@@ -1,5 +1,7 @@
+from typing import Match
 from django.core import validators
 from django.db import models
+from django.db.models.expressions import F
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator,MinValueValidator
@@ -57,12 +59,12 @@ class EnterpriseModel(models.Model):
     owner = models.ForeignKey('account.CustomUserModel',on_delete=models.CASCADE,verbose_name = 'Sirket sahibi(email)',related_name='Sirketler',null=True,blank=False)
     name = models.CharField(max_length=150,verbose_name="Muessise adi")
     authorized_person = models.CharField(max_length=100,verbose_name='Mesul sexsin Adi',null=True,blank=False)
-    about = models.TextField(verbose_name="Muessise haqqinda:")
+    about = models.TextField(verbose_name="Muessise haqqinda:",null=True,blank=True)
     number = PhoneNumberField(null=True,blank=False)
-    services = models.ManyToManyField(ServiceModel,related_name="enterprises")
-    category = models.ManyToManyField(CategoryModel,related_name="enterprises")
-    country = models.ForeignKey(CountryModel,verbose_name="Olke",related_name="enterprises",null=True, blank=False,on_delete=models.SET_NULL)
-    address = models.CharField(max_length=150)
+    services = models.CharField(max_length=100,null=True,blank=False)
+    category = models.CharField(max_length=100,null=True,blank=False)
+    country = models.CharField(verbose_name="Olke",max_length=100,null=True,blank=False)
+    address = models.CharField(max_length=150,null=True,blank=True)
     def __str__(self):
         return self.name
 
