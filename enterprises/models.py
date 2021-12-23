@@ -65,6 +65,7 @@ class EnterpriseModel(models.Model):
     category = models.CharField(max_length=100,null=True,blank=False)
     country = models.CharField(verbose_name="Olke",max_length=100,null=True,blank=False)
     address = models.CharField(max_length=150,null=True,blank=True)
+    
     def __str__(self):
         return self.name
 
