@@ -102,7 +102,6 @@
 
       <div class="container">
         <div class="language">
-          <img src="svg/language.svg" alt="" />
           <img src="{% static 'svg/language.svg' %}" alt="">
         </div>
       </div>
@@ -992,7 +991,7 @@
 
 
       <div class="back">
-        <a href="product.html">
+        <a href="{% url 'market:product' %}">
           <span style="border-bottom: 2px solid rgb(142, 146, 142);">
             
             <span>Daha çox</span>
@@ -1007,7 +1006,8 @@
       <div class="container">
         <h1 class="text animation-left">MƏSLƏHƏT</h1>
         <div class="row">
-          <form class="col-7 animation-left">
+          <form method='POST' action = '' class="col-7 animation-left">
+            {% csrf_token %}
             <div class="row">
               <div class="col-6 mb-4">
                 <div class="form-box">
@@ -1068,7 +1068,7 @@
               <img src="img/medtrip-log-white.png" alt=""
             /></a> {% endcomment %}
 
-            <a href="index.html">
+            <a href="{% url 'enterprises:index' %}">
               <img src=" {% static 'img/medtrip-log-white.png' %}" alt=""
             /></a>
           </div>

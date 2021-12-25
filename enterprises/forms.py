@@ -25,7 +25,7 @@ class AdviceForm(forms.Form):
     firstname = forms.CharField(max_length=100)
     lastname = forms.CharField(max_length=100)
     email = forms.EmailField()
-    phone_number = PhoneNumberField()
+    phone = PhoneNumberField()
     textarea = forms.CharField(max_length=1000)
     def __str__(self):
         return self.email

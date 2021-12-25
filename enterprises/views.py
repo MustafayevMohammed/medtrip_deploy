@@ -1,6 +1,8 @@
-from django.contrib.auth.models import User
+from django.conf import settings
+from django.http.response import HttpResponse
 from django.shortcuts import render
 from account.models import CustomUserModel
+from django.core.mail import send_mail
 # Create your views here.
 from django.shortcuts import redirect, render
 
@@ -9,7 +11,7 @@ from market.models import Customer, Item, ProductCategory
 #from market.models import  Product
 
 from . models import CategoryModel, CommentModel, EnterpriseModel, TourModel, CountryModel
-from .forms import CommentForm,EnterpriseRegisterForm
+from .forms import AdviceForm, CommentForm,EnterpriseRegisterForm
 from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
@@ -45,16 +47,21 @@ def company_registration(request):
         "categories":categories
     }
     return render(request,'company_registration.html',context)
-
+@csrf_protect
 def index(request):
-    """market = Item.objects.all()
-    enterprise_data = EnterpriseModel.objects.all()
-    tourmodel = TourModel.objects.all()
-    return render(request,'index.html',context ={
-        'enterprises':enterprise_data,
-        'tourmodel_data':tourmodel,
-        'market_items':market,
-    })"""
+    if request.method == 'POST':
+        form = AdviceForm(data=request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            firstname = form.cleaned_data['firstname']
+            lastname = form.cleaned_data['lastname']
+            message = form.cleaned_data['textarea']
+            name  = firstname+lastname
+            print(form.errors)
+            recipient_list = [settings.EMAIL_HOST_USER]
+            send_mail(email,name,message,recipient_list)
+            return redirect('/')
+        return HttpResponse('xeta var')
     return render(request,'index.html')
 
 #"def advice_send(request):
@@ -113,4 +120,6 @@ def detailpage(request):
 
 def sanatory(request):
     return render(request,'sanatory.html')
+
+
 
